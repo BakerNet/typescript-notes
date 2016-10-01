@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "noImplicitAny": false, //Warns you that you are assigning no type to a variable
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": false, //Source maps are good developer tool - allow you to debug in the browser in your ts file
+        "strictNullChecks": true, //Don't allow any variable to be null
+        "noEmitOnError": false, //Don't compile anyting if there are errors
+        "outDir": "./build"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
