@@ -46,9 +46,12 @@ class Car{
     }
 }
 let myCar = new Car("Yaris");
-console.log(myCar.acceleration);
-myCar.accelerate(5);
-console.log(myCar.acceleration);
+console.log(myCar.acceleration); // 0
+myCar.accelerate(6);
+console.log(myCar.acceleration); //6
+myCar.accelerate(3);
+console.log(myCar.acceleration); //9
+
 
 abstract class baseObject{
     public width: number = 0;
@@ -65,9 +68,9 @@ class Rectangle extends baseObject{
     }
 }
 let rectangle = new Rectangle(5, 2);
-console.log(rectangle.width);
-console.log(rectangle.length);
-console.log(rectangle.calcSize());
+console.log(rectangle.width); //5
+console.log(rectangle.length); //2
+console.log(rectangle.calcSize()); // 10
 
 class ExercisePerson{
     private _firstName: string = '';
@@ -77,12 +80,14 @@ class ExercisePerson{
     }
 
     set firstName(name: string){
-        this._firstName = name;
+        if(name.length > 3){
+            this._firstName = name;
+        }
     }
 }
 let exercisePerson = new ExercisePerson();
-console.log(exercisePerson.firstName);
+console.log(exercisePerson.firstName); //""
 exercisePerson.firstName = "Ma";
-console.log(exercisePerson.firstName);
+console.log(exercisePerson.firstName); // ""
 exercisePerson.firstName = "Maximilian";
-console.log(exercisePerson.firstName);
+console.log(exercisePerson.firstName); // "Maximilian"
