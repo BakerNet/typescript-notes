@@ -7,6 +7,6 @@
         "sourceMap": false, //Source maps are good developer tool - allow you to debug in the browser in your ts file
         "strictNullChecks": true, //Don't allow any variable to be null
         "noEmitOnError": false, //Don't compile anyting if there are errors
-        "outFile": "../build/modules.js"
+        "outPath": "../build"
     }
 }

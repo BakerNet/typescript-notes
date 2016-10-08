@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="../build/namespaces.js"></script>
+    <script src="../node_modules/systemjs/dist/system.js"></script>
 </head>
 <body>
-    
+    <script>
+        SystemJS.config({
+            baseURL: '../build',
+            defaultJSExtensions: true
+        });
+        SystemJS.import('app.js');
+    </script>
 </body>
 </html>
